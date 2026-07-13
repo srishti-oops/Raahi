@@ -7,84 +7,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Habits | Raahi</title>
-
+    <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/habits.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link rel="stylesheet" href="css/sidebar.css">
 </head>
 
 <body>
 
 <div class="dashboard">
 
-    <aside class="sidebar">
-
-        <div class="logo">
-
-            <h1>Raahi</h1>
-
-            <span>Your journey, intelligently guided.</span>
-
-        </div>
-
-        <nav>
-                    <a href="dashboard.html">
-                        <i class="fa-solid fa-house"></i>
-                        Dashboard
-                    </a>
-
-            <a id="sidebarAddHabit" href="javascript:void(0)">
-                <i class="fa-solid fa-plus"></i>
-                Add Habit
-            </a>
-                    <a href="mygoals.html">
-                        <i class="fa-solid fa-bullseye"></i>
-                        Goals
-                    </a>
-
-                    <a class = "active"
-                       href="habits.html">
-                        <i class="fa-solid fa-list-check"></i>
-                        Habits
-                    </a>
-
-                    <a href="journal.html">
-                        <i class="fa-solid fa-book-open"></i>
-                        Journal
-                    </a>
-
-                    <a href="aicoach.html">
-                        <i class="fa-solid fa-brain"></i>
-                        AI Coach
-                    </a>
-
-                    <a href="analytics.html">
-                        <i class="fa-solid fa-chart-line"></i>
-                        Analytics
-                    </a>
-
-                    <a href="achievements.html">
-                        <i class="fa-solid fa-award"></i>
-                        Achievements
-                    </a>
-
-                    <a class="logout"
-                       href="#">
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                        Logout
-                    </a>
-
-                </nav>
-
-            </aside>
+    <div id="sidebar-container"></div>
 
     <main class="content">
 
@@ -246,9 +188,9 @@
     </div>
 
 </div>
-
+<script src="js/theme.js"></script>
 <script src="js/habits.js"></script>
-
+<script src="js/sidebar.js"></script>
 </body>
 
 </html>

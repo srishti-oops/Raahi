@@ -1,0 +1,63 @@
+/* ==========================
+   LIGHT THEME
+========================== */
+
+:root{
+
+    --background:#FAF8F5;
+
+    --surface:#FFFFFF;
+
+    --surface-hover:#FCFBF9;
+
+    --primary:#C96F45;
+
+    --primary-hover:#B95E34;
+
+    --primary-light:#F6E8DE;
+
+    --text:#2F2A27;
+
+    --text-light:#7A746C;
+
+    --border:#E7DDD3;
+
+    --radius:14px;
+
+    --shadow:0 10px 28px rgba(0,0,0,.05);
+    --transition:.22s ease;
+    --success:#5E9D72;
+    --warning:#D9A441;
+    --danger:#C96B62;
+}
+
+/* ==========================
+   DARK THEME
+========================== */
+
+body.dark{
+
+    --background:#111827;
+
+    --surface:#1B2538;
+
+    --surface-hover:#243149;
+
+    --primary:#8B7CF6;
+
+    --primary-hover:#A092FF;
+
+    --primary-light:#32415E;
+
+    --text:#F8FAFC;
+
+    --text-light:#C8D1E1;
+
+    --border:#334155;
+
+    --shadow:0 12px 30px rgba(0,0,0,.35);
+    --transition:.22s ease;
+    --success:#5E9D72;
+    --warning:#D9A441;
+    --danger:#D46A5B;
+}

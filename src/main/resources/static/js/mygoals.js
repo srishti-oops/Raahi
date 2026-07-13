@@ -3,7 +3,6 @@ console.log("mygoals.js loaded");
 const modal = document.getElementById("goalModal");
 
 const openBtn = document.querySelector(".new-goal-btn");
-const sidebarBtn = document.getElementById("sidebarAddGoal");
 
 const closeBtn = document.querySelector(".close-modal");
 const cancelBtn = document.getElementById("cancelGoal");
@@ -189,16 +188,6 @@ function filterGoals() {
 openBtn.addEventListener("click", () => {
 
     console.log("New Goal button clicked");
-
-    resetForm();
-
-    openModal();
-
-});
-
-sidebarBtn.addEventListener("click", e => {
-
-    e.preventDefault();
 
     resetForm();
 

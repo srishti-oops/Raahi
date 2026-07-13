@@ -3,7 +3,6 @@ const API_URL = "/api/habits";
 const modal = document.getElementById("habitModal");
 
 const openBtn = document.querySelector(".new-habit-btn");
-const sidebarBtn = document.getElementById("sidebarAddHabit");
 
 const closeBtn = document.querySelector(".close-modal");
 const cancelBtn = document.getElementById("cancelHabit");
@@ -426,16 +425,6 @@ statusFilter.addEventListener(
 );
 
 openBtn.addEventListener("click", () => {
-
-    resetForm();
-
-    openModal();
-
-});
-
-sidebarBtn.addEventListener("click", e => {
-
-    e.preventDefault();
 
     resetForm();
 

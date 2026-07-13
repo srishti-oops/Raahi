@@ -3,50 +3,30 @@
 ===================================================== */
 
 :root{
-
     --background:#F8F5F2;
     --surface:#FFFFFF;
-
     --primary:#C96A43;
     --primary-dark:#A65232;
-
     --text:#33251F;
     --text-light:#72645C;
-
     --border:#E8DED7;
-
     --radius:14px;
-
     --shadow:0 12px 35px rgba(70,50,35,.08);
-
 }
-
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
-
 }
-
 html{
-
     scroll-behavior:smooth;
-
 }
-
 body{
-
     font-family:"Plus Jakarta Sans",sans-serif;
-
     background:var(--background);
-
     color:var(--text);
-
     overflow-x:hidden;
-
 }
-
 a{
 
     text-decoration:none;

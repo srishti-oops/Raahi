@@ -1,38 +1,3 @@
-/* ===========================================
-   RAAHI DESIGN SYSTEM
-=========================================== */
-
-:root{
-
-    --bg:#FAF8F5;
-    --surface:#FFFFFF;
-    --surface-soft:#FCFBF9;
-
-    --primary:#C96F45;
-    --primary-hover:#B86138;
-    --primary-light:#F6E7DE;
-
-    --text:#2F2A27;
-    --text-light:#7A746C;
-
-    --border:#E7DDD3;
-
-    --success:#5E9D72;
-    --warning:#D9A441;
-    --danger:#C96B62;
-
-    --radius:10px;
-
-    --shadow:0 6px 18px rgba(0,0,0,.05);
-
-    --transition:.22s ease;
-
-}
-
-/* ===========================================
-   RESET
-=========================================== */
-
 *{
     margin:0;
     padding:0;
@@ -44,38 +9,26 @@ html{
 }
 
 body{
-
     font-family:"Plus Jakarta Sans",sans-serif;
-
-    background:var(--bg);
-
+    background:var(--background);
     color:var(--text);
-
     line-height:1.6;
-
 }
 
 a{
-
     text-decoration:none;
-
     color:inherit;
-
 }
 
 button,
 input,
 select,
 textarea{
-
     font:inherit;
-
 }
 
 button{
-
     cursor:pointer;
-
 }
 
 /* ===========================================
@@ -83,131 +36,13 @@ button{
 =========================================== */
 
 .dashboard{
-
     display:flex;
-
     min-height:100vh;
-
-}
-
-.sidebar{
-
-    width:220px;
-
-    background:#FFF8F2;
-
-    border-right:1px solid var(--border);
-
-    padding:24px 18px;
-
 }
 
 .content{
-
     flex:1;
-
     padding:32px 34px;
-
-}
-
-/* ===========================================
-   LOGO
-=========================================== */
-
-.logo{
-
-    margin-bottom:36px;
-
-}
-
-.logo h1{
-
-    font-size:40px;
-
-    color:var(--primary);
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-weight:600;
-
-}
-
-.logo span{
-
-    display:block;
-
-    margin-top:6px;
-
-    font-size:12px;
-
-    color:var(--text-light);
-
-}
-
-/* ===========================================
-   SIDEBAR
-=========================================== */
-
-.sidebar nav{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:6px;
-
-}
-
-.sidebar nav a{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    padding:11px 14px;
-
-    border-radius:8px;
-
-    transition:var(--transition);
-
-    font-size:14px;
-
-    color:var(--text);
-
-}
-
-.sidebar nav a:hover{
-
-    background:var(--primary-light);
-
-    color:var(--primary);
-
-}
-
-.sidebar nav a.active{
-
-    background:var(--primary-light);
-
-    color:var(--primary);
-
-    font-weight:600;
-
-}
-
-.sidebar nav i{
-
-    width:18px;
-
-    text-align:center;
-
-}
-
-.logout{
-
-    margin-top:30px;
-
 }
 
 /* ===========================================
@@ -215,49 +50,30 @@ button{
 =========================================== */
 
 .page-header{
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:flex-start;
-
     margin-bottom:26px;
-
 }
 
 .section-tag{
-
     color:var(--primary);
-
     font-size:13px;
-
     font-weight:600;
-
     margin-bottom:8px;
-
     display:block;
-
 }
-
 .page-header h1{
-
+    font-family:'Cormorant Garamond',serif;
     font-size:30px;
-
-    font-weight:700;
-
-    margin-bottom:8px;
-
+    color:var(--text);
+    margin-bottom:6px;
 }
-
 .page-header p{
-
+    margin-top:6px;
     color:var(--text-light);
-
-    max-width:600px;
-
     font-size:14px;
-
+    max-width:600px;
 }
 
 /* ===========================================
@@ -265,49 +81,31 @@ button{
 =========================================== */
 
 .primary-btn{
-
     background:var(--primary);
-
-    color:white;
-
+    color:#fff;
     border:none;
-
     border-radius:10px;
-
     height:42px;
-
     padding:0 18px;
-
     transition:var(--transition);
-
 }
 
 .primary-btn:hover{
-
     background:var(--primary-hover);
-
 }
 
 .secondary-btn{
-
-    background:white;
-
+    background:var(--surface);
+    color:var(--text);
     border:1px solid var(--border);
-
     border-radius:10px;
-
     height:42px;
-
     padding:0 18px;
-
 }
 
 .secondary-btn:hover{
-
     border-color:var(--primary);
-
     color:var(--primary);
-
 }
 
 /* ===========================================
@@ -315,69 +113,43 @@ button{
 =========================================== */
 
 .card{
-
     background:var(--surface);
-
     border:1px solid var(--border);
-
     border-radius:10px;
-
     padding:18px;
-
     box-shadow:var(--shadow);
-
     transition:var(--transition);
-
 }
 
 .card:hover{
-
-    border-color:#D9C7BA;
-
+    border-color:var(--primary-light);
     transform:translateY(-2px);
-
 }
 
 .card-title{
-
     font-size:18px;
-
     font-weight:600;
-
     margin-bottom:8px;
-
 }
 
 .card-text{
-
     color:var(--text-light);
-
     font-size:14px;
-
 }
-
 /* ===========================================
    GRID
 =========================================== */
 
 .grid-2{
-
     display:grid;
-
     grid-template-columns:repeat(2,1fr);
-
     gap:18px;
-
 }
 
 .grid-3{
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:18px;
-
 }
 
 /* ===========================================
@@ -387,27 +159,24 @@ button{
 input,
 textarea,
 select{
-
     width:100%;
-
     border:1px solid var(--border);
-
     border-radius:10px;
-
     padding:12px 14px;
-
-    background:white;
-
+    background:var(--surface);
+    color:var(--text);
     outline:none;
+}
 
+input::placeholder,
+textarea::placeholder{
+    color:var(--text-light);
 }
 
 input:focus,
 textarea:focus,
 select:focus{
-
     border-color:var(--primary);
-
 }
 
 /* ===========================================
@@ -415,46 +184,32 @@ select:focus{
 =========================================== */
 
 .modal{
-
     display:none;
-
     position:fixed;
-
     inset:0;
-
     background:rgba(0,0,0,.35);
-
     justify-content:center;
-
     align-items:center;
-
     z-index:9999;
-
 }
 
 .modal-content{
-
     width:min(650px,92vw);
-
-    background:white;
-
+    background:var(--surface);
     border-radius:12px;
-
     border:1px solid var(--border);
-
     padding:28px;
-
     box-shadow:0 18px 60px rgba(0,0,0,.18);
-
 }
+
 /* ==========================
    GOALS PAGE
 ========================== */
 
 .toolbar{
     display:flex;
-    gap:18px;
-    margin-bottom:24px;
+    gap:16px;
+    margin-bottom:22px;
     align-items:center;
 }
 
@@ -463,7 +218,7 @@ select:focus{
     display:flex;
     align-items:center;
     gap:12px;
-    background:#fff;
+    background:var(--surface);
     border:1px solid var(--border);
     border-radius:10px;
     padding:0 16px;
@@ -473,6 +228,7 @@ select:focus{
 .search-box input{
     border:none;
     background:transparent;
+    color:var(--text);
     padding:0;
 }
 
@@ -482,6 +238,8 @@ select:focus{
 
 #statusFilter{
     width:190px;
+    background:var(--surface);
+    color:var(--text);
 }
 
 .goals-container{
@@ -491,7 +249,7 @@ select:focus{
 }
 
 .goal-card{
-    background:#fff;
+    background:var(--surface);
     border:1px solid var(--border);
     border-radius:10px;
     padding:18px;
@@ -503,7 +261,7 @@ select:focus{
 }
 
 .goal-card:hover{
-    border-color:#d8c8bc;
+    border-color:var(--primary-light);
 }
 
 .goal-status{
@@ -521,6 +279,7 @@ select:focus{
 .goal-card h3{
     font-size:22px;
     margin-bottom:8px;
+    color:var(--text);
 }
 
 .goal-description{
@@ -557,13 +316,24 @@ select:focus{
 }
 
 .edit-btn{
-    background:#fff;
+    background:var(--surface);
+    color:var(--text);
     border:1px solid var(--border);
 }
 
+.edit-btn:hover{
+    border-color:var(--primary);
+    color:var(--primary);
+}
+
 .delete-btn{
-    background:#f5f5f5;
+    background:var(--surface-hover);
+    color:var(--text);
     border:none;
+}
+
+.delete-btn:hover{
+    background:var(--border);
 }
 
 .complete-btn{
@@ -572,25 +342,33 @@ select:focus{
     border:none;
 }
 
+.complete-btn:hover{
+    background:var(--primary-hover);
+}
+
 .empty-state{
     grid-column:1/-1;
     text-align:center;
-    background:#fff;
+    background:var(--surface);
     border:1px solid var(--border);
     border-radius:10px;
     padding:60px 30px;
 }
-
 .new-goal-btn{
     display:flex;
     align-items:center;
     gap:8px;
+    border:none;
     background:var(--primary);
     color:#fff;
-    border:none;
-    border-radius:10px;
-    padding:0 20px;
-    height:44px;
+    padding:11px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    transition:.2s ease;
+}
+
+.new-goal-btn:hover{
+    background:var(--primary-hover);
 }
 
 .new-goal-btn:hover{
@@ -611,6 +389,7 @@ select:focus{
     margin:0;
     font-size:22px;
     font-weight:700;
+    color:var(--text);
 }
 
 .close-modal{
@@ -642,6 +421,7 @@ select:focus{
     margin-bottom:8px;
     font-size:14px;
     font-weight:500;
+    color:var(--text);
 }
 
 .form-group input,
@@ -652,8 +432,14 @@ select:focus{
     border-radius:10px;
     padding:12px 14px;
     outline:none;
-    background:#fff;
+    background:var(--surface);
+    color:var(--text);
     transition:.2s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+    color:var(--text-light);
 }
 
 .form-group input:focus,
@@ -681,7 +467,7 @@ select:focus{
 }
 
 #cancelGoal{
-    background:#fff;
+    background:var(--surface);
     border:1px solid var(--border);
     color:var(--text);
     border-radius:10px;
@@ -703,4 +489,34 @@ select:focus{
 
 #saveGoalBtn:hover{
     background:var(--primary-hover);
+}
+
+/* ===========================================
+   DARK MODE FIXES
+=========================================== */
+
+body.dark input,
+body.dark textarea,
+body.dark select{
+    background:var(--surface);
+    color:var(--text);
+    border-color:var(--border);
+}
+
+body.dark input::placeholder,
+body.dark textarea::placeholder{
+    color:var(--text-light);
+}
+
+body.dark .delete-btn{
+    background:var(--surface-hover);
+    color:var(--text);
+}
+
+body.dark .delete-btn:hover{
+    background:var(--border);
+}
+
+body.dark .modal{
+    background:rgba(0,0,0,.55);
 }

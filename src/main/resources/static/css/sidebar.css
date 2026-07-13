@@ -1,0 +1,253 @@
+:root{
+    --sidebar-bg:#FFF8F2;
+    --sidebar-border:#E7DDD4;
+    --sidebar-primary:#C96F45;
+    --sidebar-primary-light:#F8ECE2;
+    --sidebar-text:#2E2A28;
+    --sidebar-text-light:#7A736C;
+}
+
+.raahi-sidebar{
+    width:220px;
+    min-width:220px;
+    height:100vh;
+    background:var(--sidebar-bg);
+    border-right:1px solid var(--sidebar-border);
+    padding:24px 18px;
+    display:flex;
+    flex-direction:column;
+    position:sticky;
+    top:0;
+    left:0;
+    overflow-y:auto;
+    flex-shrink:0;
+}
+
+.raahi-logo{
+    margin-bottom:36px;
+}
+
+.raahi-logo h1{
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
+    font-weight:700;
+    color:var(--sidebar-primary);
+    line-height:1;
+    letter-spacing:.5px;
+}
+
+.raahi-logo span{
+    display:block;
+    margin-top:6px;
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:12px;
+    font-weight:400;
+    color:var(--sidebar-text-light);
+    line-height:1.5;
+}
+.raahi-nav{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    flex:1;
+}
+
+.raahi-nav-link{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:10px 14px;
+    border-radius:8px;
+    color:var(--sidebar-text);
+    font-family:'Plus Jakarta Sans',sans-serif;
+    font-size:15px;
+    font-weight:500;
+    transition:all .25s ease;
+}
+
+.raahi-nav-link i{
+    width:18px;
+    font-size:16px;
+    text-align:center;
+    color:var(--sidebar-text-light);
+    transition:all .25s ease;
+}
+
+.raahi-nav-link span{
+    flex:1;
+}
+
+.raahi-nav-link:hover{
+    background:var(--sidebar-primary-light);
+    color:var(--sidebar-primary);
+}
+
+.raahi-nav-link:hover i{
+    color:var(--sidebar-primary);
+}
+
+.raahi-nav-link.active{
+    background:var(--sidebar-primary-light);
+    color:var(--sidebar-primary);
+    font-weight:600;
+}
+
+.raahi-nav-link.active i{
+    color:var(--sidebar-primary);
+}
+
+.raahi-nav-link:active{
+    transform:scale(.98);
+}
+
+.raahi-nav-link:focus{
+    outline:none;
+    background:var(--sidebar-primary-light);
+    color:var(--sidebar-primary);
+}
+
+.raahi-nav-link:focus i{
+    color:var(--sidebar-primary);
+}
+.raahi-logout{
+    margin-top:auto;
+}
+
+.raahi-logout i{
+    color:#B25B35;
+}
+
+.raahi-sidebar::-webkit-scrollbar{
+    width:6px;
+}
+
+.raahi-sidebar::-webkit-scrollbar-track{
+    background:transparent;
+}
+
+.raahi-sidebar::-webkit-scrollbar-thumb{
+    background:#E4D5C8;
+    border-radius:20px;
+}
+
+.raahi-sidebar::-webkit-scrollbar-thumb:hover{
+    background:#D7C2B0;
+}
+
+@media(max-width:900px){
+    .raahi-sidebar{
+        width:100%;
+        min-width:100%;
+        height:auto;
+        position:relative;
+        border-right:none;
+        border-bottom:1px solid var(--sidebar-border);
+        padding:18px;
+    }
+
+    .raahi-logo{
+        margin-bottom:24px;
+    }
+
+    .raahi-logo h1{
+        font-size:34px;
+    }
+
+    .raahi-nav{
+        gap:4px;
+    }
+
+    .raahi-nav-link{
+        padding:12px 14px;
+    }
+
+    .raahi-logout{
+        margin-top:20px;
+    }
+}
+
+@media(max-width:600px){
+    .raahi-sidebar{
+        padding:16px;
+    }
+
+    .raahi-logo h1{
+        font-size:30px;
+    }
+
+    .raahi-logo span{
+        font-size:11px;
+    }
+
+    .raahi-nav-link{
+        font-size:14px;
+        padding:10px 12px;
+        gap:10px;
+    }
+
+    .raahi-nav-link i{
+        width:16px;
+        font-size:15px;
+    }
+}
+/* =========================================
+   DARK MODE
+========================================= */
+
+body.dark .raahi-sidebar{
+
+    background:var(--surface);
+
+    border-right:1px solid var(--border);
+
+}
+
+body.dark .raahi-logo h1{
+
+    color:var(--primary);
+
+}
+
+body.dark .raahi-logo span{
+
+    color:var(--text-light);
+
+}
+
+body.dark .raahi-nav-link{
+
+    color:var(--text-light);
+
+}
+
+body.dark .raahi-nav-link i{
+
+    color:var(--text-light);
+
+}
+
+body.dark .raahi-nav-link:hover{
+
+    background:rgba(139,124,246,.12);
+
+}
+
+body.dark .raahi-nav-link.active{
+
+    background:rgba(139,124,246,.18);
+
+    color:var(--primary);
+
+}
+
+body.dark .raahi-nav-link.active i{
+
+    color:var(--primary);
+
+}
+
+body.dark .raahi-logout{
+
+    color:var(--text-light);
+
+}

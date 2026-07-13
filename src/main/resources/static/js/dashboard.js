@@ -42,171 +42,83 @@ let running = false;
 /* ==========================================================
    DAILY QUOTES
 ========================================================== */
-
 const quotes = [
-
     "Small consistent actions create extraordinary results.",
-
     "Progress is built one focused session at a time.",
-
     "Discipline creates freedom.",
-
     "One completed task beats ten planned tasks.",
-
     "Keep showing up. Consistency compounds."
-
 ];
-
 /* ==========================================================
    HEADER
 ========================================================== */
-
 function loadGreeting(){
-
     const hour = new Date().getHours();
-
     let message = "Good Evening";
-
     if(hour < 12){
-
         message = "Good Morning";
-
     }
-
     else if(hour < 17){
-
         message = "Good Afternoon";
-
     }
-
     greeting.textContent =
         `${message}, Ishika`;
-
 }
-
 function loadDate(){
-
     currentDate.textContent =
-
         new Date().toLocaleDateString(
-
             "en-IN",
-
             {
-
                 weekday:"long",
-
                 day:"numeric",
-
                 month:"long"
-
             }
-
         );
-
 }
-
 function updateLastSynced(){
-
     lastSynced.textContent =
-
         "Last synced " +
-
         new Date().toLocaleTimeString(
-
             [],
-
             {
-
                 hour:"2-digit",
-
                 minute:"2-digit"
-
             }
-
         );
-
 }
-
 /* ==========================================================
    PROFILE
 ========================================================== */
-
 function loadProfile(){
-
     profileButton.textContent = "IA";
-
 }
-
 /* ==========================================================
    QUOTE
 ========================================================== */
-
 function loadQuote(){
-
     const index =
-
         Math.floor(
-
             Math.random()*quotes.length
-
         );
-
     quote.textContent =
-
         quotes[index];
-
 }
-
 /* ==========================================================
    THEME
 ========================================================== */
-
 function loadTheme(){
-
-    const saved =
-
-        localStorage.getItem("theme");
-
-    if(saved==="dark"){
-
+    const savedTheme = localStorage.getItem("theme");
+    if(savedTheme === "dark"){
         document.body.classList.add("dark");
-
-        themeToggle.innerHTML =
-
-            '<i class="fa-solid fa-sun"></i>';
-
+    }else{
+        document.body.classList.remove("dark");
     }
-
-}
-if (themeToggle) {
-
-    themeToggle.addEventListener("click", () => {
-
-        document.body.classList.toggle("dark");
-
-        const dark = document.body.classList.contains("dark");
-
-        localStorage.setItem(
-            "theme",
-            dark ? "dark" : "light"
-        );
-
-        themeToggle.innerHTML = dark
-            ? '<i class="fa-solid fa-sun"></i>'
-            : '<i class="fa-solid fa-moon"></i>';
-
-    });
-
 }
 /* ==========================================================
    LOAD DASHBOARD
 ========================================================== */
-
 async function loadDashboard() {
-
     try {
-
         const [
 
             goalsResponse,
@@ -239,15 +151,11 @@ async function loadDashboard() {
         if (journalResponse.ok) {
 
             journals = await journalResponse.json();
-
         }
-
         let dashboard = {};
-
         if (dashboardResponse.ok) {
 
             dashboard = await dashboardResponse.json();
-
         }
 
         loadFocus(goals);
@@ -321,93 +229,50 @@ function loadFocus(goals){
     const goal =
 
         goals.find(
-
             g=>g.status!=="Completed"
-
         ) || goals[0];
-
     title.textContent = goal.title;
-
     description.textContent = goal.description;
-
     deadline.textContent =
-
         goal.deadline || "No Deadline";
-
     status.textContent = goal.status;
-
 }
-
 /* ==========================================================
    PRODUCTIVITY
 ========================================================== */
-
 function loadProductivity(
-
     goals,
-
     habits
-
 ){
-
     const score =
-
         document.getElementById(
-
             "productivityScore"
-
         );
-
     const text =
-
         document.getElementById(
-
             "productivityText"
-
         );
-
     const completedGoals =
-
         goals.filter(
-
             g=>g.status==="Completed"
-
         ).length;
-
     const completedHabits =
-
         habits.filter(
-
             h=>h.status==="Completed"
-
         ).length;
-
     const total =
-
         goals.length + habits.length;
-
     const percentage =
-
         total===0 ?
-
         0
-
         :
-
         Math.round(
-
             ((completedGoals+completedHabits)/total)*100
-
         );
-
     score.textContent =
-
         percentage + "%";
-
     text.textContent =
-
         percentage >= 75 ?
-
         "Excellent progress today."
 
         :
@@ -763,55 +628,32 @@ if (continueGoal) {
         window.location.href = "mygoals.html";
 
     });
-
 }
-
 /* ==========================================================
    INITIALIZE
 ========================================================== */
-
 document.addEventListener(
-
     "DOMContentLoaded",
-
     ()=>{
-
         loadTheme();
-
         loadGreeting();
-
         loadDate();
-
         updateLastSynced();
-
         loadProfile();
-
         loadQuote();
-
         updateTimerDisplay();
-
         loadDashboard();
-
     }
-
 );
 /* ===========================
    LOGOUT
 =========================== */
-
-const logoutButton = document.querySelector(".logout");
-
+const logoutButton = document.querySelector(".raahi-logout");
 if (logoutButton) {
-
     logoutButton.addEventListener("click", function (e) {
-
         e.preventDefault();
-
         localStorage.clear();
         sessionStorage.clear();
-
         window.location.href = "index.html";
-
     });
-
 }
